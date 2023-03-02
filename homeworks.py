@@ -49,6 +49,9 @@ if client.logged_in:
             desc = f"{work.description} \n\n Pour le {work.date} ({timeLeft} jours) \n État : Fait"
             setDatas(desc, couleur)
         else:
+            timeLeft = work.date - date
+            timeLeft = str(timeLeft)[:2]
+          
             couleur = "16711680"
             desc = f"{work.description} \n\n Pour le {work.date} ({timeLeft} jours) \n État : Non Fait"
             setDatas(desc, couleur)

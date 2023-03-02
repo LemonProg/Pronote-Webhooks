@@ -1,5 +1,5 @@
 import pronotepy
-from pronotepy.ent import ent_var
+# from pronotepy.ent import YOUR ENT
 from datetime import datetime
 from datetime import timedelta
 import requests
@@ -7,12 +7,14 @@ import requests
 date = datetime.date(datetime.now()) # Date today
 date2 = date + timedelta(days=2) # Date in 2 days
 
-devoirs = "put your discord webhook"
+devoirs = "enter ur webbook"
 
-client = pronotepy.Client('put your direct link pronote url',
-                   username='...',
-                   password='...',
-                   ent=...)
+client = pronotepy.Client('direct link to pronote !',
+                   username='user',
+                   password='password',
+                   ent="enter ur ent")
+
+
 if client.logged_in:
     homeworks = client.homework(date, date2)
     
